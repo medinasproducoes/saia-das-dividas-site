@@ -1,0 +1,9 @@
+{
+  "name": "saia-das-dividas-site",
+  "compatibility_date": "2026-07-11",
+  "main": "./_worker.js",
+  "assets": {
+    "directory": "./",
+    "binding": "ASSETS"
+  }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compra Confirmada — Saia das Dívidas | Medina'S Produções</title>
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+<!-- TIKTOK PIXEL -->
+<script>
+  !function (w, d, t) { w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];
+  ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"];
+  ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
+  for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
+  ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e};
+  ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{};ttq._i[e]=[];ttq._i[e]._u=i;ttq._t=ttq._t||{};ttq._t[e]=+new Date;ttq._o=ttq._o||{};ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript";o.async=!0;o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+  ttq.load('D93M0A3C77UARCKAUFB0'); ttq.page(); }(window, document, 'ttq');
+</script>
+
+<style>
+:root{--floresta:#0F3D2E;--floresta-deep:#0A2921;--dourado:#B8935A;--branco:#F8F9F6;--bege:#F2EFE9;--cinza:#4A5550;--cinza-claro:#7C8B84}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Lato',sans-serif;background:var(--branco);color:var(--cinza);line-height:1.7;min-height:100vh;display:flex;flex-direction:column}
+h1,h2{font-family:'Lora',serif;color:var(--floresta)}
+.topbar{background:var(--floresta-deep);padding:16px 0}
+.topbar .container{max-width:680px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:10px;color:#fff;font-family:'Lora',serif;font-weight:700}
+.logo-icon{width:30px;height:30px;background:var(--dourado);border-radius:7px;display:flex;align-items:center;justify-content:center;color:var(--floresta-deep);font-weight:800}
+main{flex:1;max-width:680px;margin:0 auto;padding:48px 24px;width:100%}
+.hidden{display:none}
+@keyframes girar{to{transform:rotate(360deg)}}
+.spinner{animation:girar 1s linear infinite}
+.icone{width:72px;height:72px;background:#E6F0EA;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:var(--floresta)}
+.btn{display:inline-block;background:var(--dourado);color:var(--floresta-deep);font-weight:700;padding:16px 32px;border-radius:10px;text-decoration:none;border:none;cursor:pointer;font-size:16px}
+.card{background:#fff;border:1px solid #E5E0D8;border-radius:16px;padding:32px;margin-bottom:20px}
+input,select,textarea{width:100%;padding:12px 14px;border:1.5px solid #E5E0D8;border-radius:8px;font-size:14px;margin-top:6px;font-family:'Lato'}
+label{font-size:12px;font-weight:700;text-transform:uppercase;color:var(--cinza)}
+.field{margin-bottom:16px}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container"><span class="logo-icon">M</span> Medina'S Produções</div></div>
+<main>
+  <div id="estado-verificando" class="text-center" style="text-align:center;padding:80px 0">
+    <svg class="spinner" width="48" height="48" viewBox="0 0 24 24" style="color:var(--floresta)"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" opacity="0.25"/><path d="M12 2a10 10 0 0110 10" stroke="currentColor" stroke-width="3" fill="none"/></svg>
+    <p style="margin-top:16px;font-weight:600">Verificando seu pagamento...</p>
+  </div>
+
+  <div id="estado-sucesso" class="hidden">
+    <div style="text-align:center;margin-bottom:32px">
+      <div class="icone"><svg width="34" height="34" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></div>
+      <h1>Pagamento confirmado!</h1>
+      <p style="color:var(--cinza-claro);margin-top:8px">Seu acesso ao guia já está liberado.</p>
+    </div>
+    <div class="card" style="text-align:center">
+      <a href="assets/saia-das-dividas-2026.pdf" class="btn" download>Baixar meu Guia Agora →</a>
+      <p style="font-size:12px;color:var(--cinza-claro);margin-top:16px">Salve este link — seu acesso é vitalício.</p>
+    </div>
+  </div>
+
+  <div id="estado-manual" class="hidden">
+    <div style="text-align:center;margin-bottom:32px">
+      <div class="icone"><svg width="34" height="34" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></div>
+      <h1>Recebemos sua compra!</h1>
+      <p style="color:var(--cinza-claro);margin-top:8px">Falta só confirmar pra liberarmos seu acesso.</p>
+    </div>
+    <div class="card">
+      <h2 style="font-size:18px;margin-bottom:16px">Confirme sua compra</h2>
+      <div class="field"><label>Seu nome</label><input type="text" id="conf-nome"></div>
+      <div class="field"><label>E-mail usado na compra</label><input type="email" id="conf-email"></div>
+      <button class="btn" style="width:100%" onclick="enviarWhatsApp()">Confirmar via WhatsApp</button>
+    </div>
+    <p style="text-align:center;font-size:13px;color:var(--cinza-claro)">Dúvidas? <a href="mailto:curriculopro.site@gmail.com" style="color:var(--dourado)">curriculopro.site@gmail.com</a></p>
+  </div>
+</main>
+<footer style="background:var(--floresta-deep);color:#9FB0A6;text-align:center;padding:24px 0;font-size:13px">
+  © 2026 Saia das Dívidas — Medina'S Produções.
+</footer>
+<script>
+const NUMERO_WHATSAPP_SUPORTE = '5545991359764';
+const HANDLE_INFINITEPAY = 'medina_pay';
+
+function mostrarEstado(id) {
+  ['estado-verificando', 'estado-sucesso', 'estado-manual'].forEach(estado => {
+    document.getElementById(estado).classList.toggle('hidden', estado !== id);
+  });
+}
+
+async function verificarPagamento() {
+  const params = new URLSearchParams(window.location.search);
+  const order_nsu = params.get('order_nsu');
+  const transaction_nsu = params.get('transaction_nsu');
+  const slug = params.get('slug');
+
+  if (!order_nsu || !transaction_nsu || !slug) {
+    mostrarEstado('estado-manual');
+    return;
+  }
+
+  mostrarEstado('estado-verificando');
+
+  try {
+    const resp = await fetch('/.netlify/functions/verify-payment', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ handle: HANDLE_INFINITEPAY, order_nsu, transaction_nsu, slug })
+    });
+    const data = await resp.json();
+
+    if (data.paid === true) {
+      if (window.ttq) ttq.track('CompletePayment', { value: 37.90, currency: 'BRL' });
+      mostrarEstado('estado-sucesso');
+    } else {
+      mostrarEstado('estado-manual');
+    }
+  } catch (err) {
+    console.error('Erro ao verificar pagamento:', err);
+    mostrarEstado('estado-manual');
+  }
+}
+
+function enviarWhatsApp() {
+  const nome = document.getElementById('conf-nome').value.trim();
+  const email = document.getElementById('conf-email').value.trim();
+  if (!nome || !email) { alert('Preencha nome e e-mail antes de enviar.'); return; }
+  const msg = `Olá! Acabei de comprar o Saia das Dívidas e gostaria de confirmar meu pagamento.\n\nNome: ${nome}\nE-mail: ${email}`;
+  window.open(`https://wa.me/${NUMERO_WHATSAPP_SUPORTE}?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+verificarPagamento();
+</script>
+</body>
+</html>

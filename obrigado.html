@@ -101,7 +101,7 @@ async function verificarPagamento() {
   mostrarEstado('estado-verificando');
 
   try {
-    const resp = await fetch('/.netlify/functions/verify-payment', {
+    const resp = await fetch('/api/verify-payment', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ handle: HANDLE_INFINITEPAY, order_nsu, transaction_nsu, slug })

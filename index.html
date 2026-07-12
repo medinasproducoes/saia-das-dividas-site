@@ -119,7 +119,7 @@ footer a{color:var(--dourado)}
       <span class="eyebrow">Guia Prático · Edição 2026</span>
       <h1>Saia das Dívidas <em>de Uma Vez por Todas</em></h1>
       <p>O método passo a passo para quitar dívidas, usar seus direitos legais e recuperar o controle financeiro — mesmo com salário pequeno, e sem fórmula mágica.</p>
-      <button class="btn" id="btn-comprar-1" onclick="iniciarCompra(this)">Quero organizar minhas dívidas — R$ 37,90</button>
+      <button class="btn" id="btn-comprar-1" onclick="iniciarCompra(this)">Quero organizar minhas dívidas — R$ 34,90</button>
       <p class="trust">Pix sem taxas ou cartão · Acesso imediato após pagamento</p>
     </div>
   </div>
@@ -194,7 +194,7 @@ footer a{color:var(--dourado)}
   <div class="container">
     <div class="oferta">
       <span class="eyebrow">Acesso imediato</span>
-      <div class="price">R$ 37,90</div>
+      <div class="price">R$ 34,90</div>
       <ul>
         <li><b>✓</b> Guia completo — 8 capítulos + 5 bônus</li>
         <li><b>✓</b> Modelos prontos de negociação com banco e financeira</li>
@@ -237,7 +237,7 @@ async function iniciarCompra(btn) {
             throw new Error(data.error || 'Não foi possível gerar o link de pagamento');
         }
 
-        if (window.ttq) ttq.track('InitiateCheckout', { value: 37.90, currency: 'BRL' });
+        if (window.ttq) ttq.track('InitiateCheckout', { value: 34.90, currency: 'BRL' });
         window.location.href = data.url;
     } catch (err) {
         console.error('Erro ao iniciar compra:', err);

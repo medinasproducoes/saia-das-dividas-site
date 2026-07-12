@@ -8,7 +8,7 @@ async function criarPagamento(request) {
 
     const payload = {
       handle: 'medina_pay',
-      items: [{ quantity: 1, price: 3790, description: 'Saia das Dívidas de Uma Vez por Todas - Acesso Vitalício' }],
+      items: [{ quantity: 1, price: 3490, description: 'Saia das Dívidas de Uma Vez por Todas - Acesso Vitalício' }],
       order_nsu: orderNsu,
       redirect_url: `${SITE_URL}/obrigado.html`,
       webhook_url: `${SITE_URL}/api/webhook-infinitepay`

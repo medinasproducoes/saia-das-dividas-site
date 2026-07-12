@@ -111,7 +111,7 @@ async function verificarPagamento() {
     const data = await resp.json();
 
     if (data.paid === true) {
-      if (window.ttq) ttq.track('CompletePayment', { value: 37.90, currency: 'BRL' });
+      if (window.ttq) ttq.track('CompletePayment', { value: 34.90, currency: 'BRL' });
       mostrarEstado('estado-sucesso');
     } else {
       mostrarEstado('estado-manual');

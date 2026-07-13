@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato e Suporte | Saia das Dívidas</title>
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,600&family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FAF6EE;--floresta:#0F3D2E;--floresta-deep:#0A2921;--dourado:#B8935A;--charcoal:#1A2420;--cinza-claro:#8296A3;--line:rgba(15,61,46,.12)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--charcoal);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+h1,h2{font-family:'Lora',serif;color:var(--charcoal);font-weight:600}
+.topbar{background:var(--floresta-deep);padding:16px 0}
+.topbar .container{max-width:1000px;margin:0 auto;padding:0 24px;color:#fff;font-family:'Lora',serif;font-weight:600}
+.topbar span{color:var(--dourado);font-style:italic}
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:48px 24px}
+.card{max-width:920px;width:100%;background:#fff;border-radius:20px;box-shadow:0 20px 60px rgba(15,61,46,.1);overflow:hidden;display:grid;grid-template-columns:1fr 1.2fr}
+.painel{background:linear-gradient(160deg,var(--floresta) 0%,var(--floresta-deep) 100%);padding:48px 40px;color:#fff;position:relative;overflow:hidden}
+.painel::before{content:'';position:absolute;width:280px;height:280px;border-radius:50%;background:rgba(184,147,90,.14);top:-100px;right:-100px}
+.painel-content{position:relative;z-index:1}
+.painel h1{color:#fff;font-size:25px;margin-bottom:14px}
+.painel p{font-size:14.5px;color:#CFE0D6;line-height:1.7;margin-bottom:24px}
+.form-lado{padding:48px 40px}
+.form-lado h2{font-size:22px;margin-bottom:6px}
+.form-lado .sub{font-size:13.5px;color:var(--cinza-claro);margin-bottom:28px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--charcoal);margin-bottom:7px}
+.field input,.field select,.field textarea{width:100%;padding:13px 16px;border:1.5px solid var(--line);border-radius:10px;font-size:14.5px;font-family:'Lato';background:var(--cream)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--floresta);background:#fff}
+.btn-enviar{display:inline-flex;align-items:center;gap:10px;background:var(--floresta);color:#fff;font-weight:700;font-size:15px;padding:15px 32px;border:none;border-radius:10px;cursor:pointer}
+@media(max-width:760px){.card{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container">Saia das <span>Dívidas</span></div></div>
+<main>
+<div class="card">
+  <div class="painel">
+    <div class="painel-content">
+      <h1>Fale com a gente</h1>
+      <p>Dúvidas sobre o guia, questões de pagamento, reembolso ou dados pessoais — respondemos com atenção.</p>
+      <p style="font-size:13px;color:#AECDBB">Resposta em até 2 dias úteis. Sua mensagem não fica armazenada em nosso servidor.</p>
+    </div>
+  </div>
+  <div class="form-lado">
+    <h2>Envie sua mensagem</h2>
+    <p class="sub">Preencha os campos abaixo — é rápido.</p>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="ed729295-176e-43af-bc4f-53158098c893">
+      <input type="hidden" name="subject" value="Contato - Saia das Dívidas">
+      <input type="hidden" name="from_name" value="Formulário do site - Saia das Dívidas">
+      <div class="field"><label>Seu nome</label><input type="text" name="name" required></div>
+      <div class="field"><label>Seu e-mail</label><input type="email" name="email" required></div>
+      <div class="field">
+        <label>Assunto</label>
+        <select name="assunto">
+          <option>Dúvida sobre o guia</option>
+          <option>Pagamento não confirmado</option>
+          <option>Solicitação de reembolso</option>
+          <option>Dados pessoais (LGPD)</option>
+          <option>Outro assunto</option>
+        </select>
+      </div>
+      <div class="field"><label>Mensagem</label><textarea name="message" rows="4" required placeholder="Se for sobre pagamento, inclua a data e o valor pago."></textarea></div>
+      <button type="submit" class="btn-enviar">Enviar mensagem</button>
+    </form>
+  </div>
+</div>
+</main>
+</body>
+</html>

@@ -71,9 +71,9 @@ label{font-size:12px;font-weight:700;text-transform:uppercase;color:var(--cinza)
       <h2 style="font-size:18px;margin-bottom:16px">Confirme sua compra</h2>
       <div class="field"><label>Seu nome</label><input type="text" id="conf-nome"></div>
       <div class="field"><label>E-mail usado na compra</label><input type="email" id="conf-email"></div>
-      <button class="btn" style="width:100%" onclick="enviarWhatsApp()">Confirmar via WhatsApp</button>
+      <div class="field"><label>Valor pago (opcional)</label><input type="text" id="conf-valor" placeholder="Ex: R$ 34,90"></div>
+      <button class="btn" style="width:100%" onclick="irParaContato()">Falar com o Suporte</button>
     </div>
-    <p style="text-align:center;font-size:13px;color:var(--cinza-claro)">Dúvidas? <a href="mailto:curriculopro.site@gmail.com" style="color:var(--dourado)">curriculopro.site@gmail.com</a></p>
   </div>
 </main>
 <footer style="background:var(--floresta-deep);color:#9FB0A6;text-align:center;padding:24px 0;font-size:13px">
@@ -128,6 +128,16 @@ function enviarWhatsApp() {
   if (!nome || !email) { alert('Preencha nome e e-mail antes de enviar.'); return; }
   const msg = `Olá! Acabei de comprar o Saia das Dívidas e gostaria de confirmar meu pagamento.\n\nNome: ${nome}\nE-mail: ${email}`;
   window.open(`https://wa.me/${NUMERO_WHATSAPP_SUPORTE}?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+function irParaContato() {
+  const nome = document.getElementById('conf-nome').value.trim();
+  const email = document.getElementById('conf-email').value.trim();
+  const valor = document.getElementById('conf-valor').value.trim();
+  if (!nome || !email) { alert('Preencha nome e e-mail antes de enviar.'); return; }
+  const params = new URLSearchParams({ nome, email, assunto: 'Pagamento não confirmado' });
+  if (valor) params.set('valor', valor);
+  window.location.href = `contato.html?${params.toString()}`;
 }
 
 verificarPagamento();
